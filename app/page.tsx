@@ -77,13 +77,13 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
                         height="20"
-                        className="sm:w-6 sm:h-6"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="white"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
+                        className="sm:w-6 sm:h-6"
                       >
                         <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
                         <circle cx="12" cy="5" r="2"></circle>
@@ -121,14 +121,13 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"
                         height="14"
-                        className="sm:w-4 sm:h-4"
+                        className="sm:w-4 sm:h-4 mr-2 group-hover:translate-x-1 transition-transform duration-300"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="mr-2 group-hover:translate-x-1 transition-transform duration-300"
                       >
                         <path d="m9 18 6-6-6-6"></path>
                       </svg>
@@ -144,7 +143,6 @@ export default function Home() {
                     const formData = new FormData(e.target as HTMLFormElement)
                     const message = formData.get("message") as string
                     if (message.trim()) {
-                      // Redirect to AI assistant page with the message as a query parameter
                       window.location.href = `/ai-assistant?message=${encodeURIComponent(message.trim())}`
                     }
                   }}
@@ -297,7 +295,9 @@ export default function Home() {
 
                 {/* Compact call to action */}
                 <div className="text-center mt-4 sm:mt-6">
-                  <Link href="/resources"></Link>
+                  <Link href="/resources" className="text-white font-bold text-sm sm:text-base">
+                    مشاهده منابع
+                  </Link>
                 </div>
               </div>
             </div>
